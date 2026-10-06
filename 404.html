@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>404 - Page Not Found</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    .error-page {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 2rem;
+      background: var(--bg-mint);
+    }
+    .error-code {
+      font-size: clamp(6rem, 15vw, 12rem);
+      font-weight: 900;
+      font-family: var(--font-heading);
+      background: linear-gradient(135deg, var(--accent), var(--warm));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      line-height: 1;
+      margin-bottom: 1rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="error-page">
+    <div class="error-code">404</div>
+    <h1 style="margin-bottom: 1rem; font-size: 2rem;">Oops! Tooth not found.</h1>
+    <p style="color: var(--text-muted); max-width: 500px; margin-bottom: 2rem; line-height: 1.8;">
+      The page you're looking for might have been removed, had its name changed, or is temporarily unavailable. Let's get you back to a healthy smile.
+    </p>
+    <a href="index.html" class="btn btn-primary btn-lg">Return Home</a>
+  </div>
+</body>
+</html>

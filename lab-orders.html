@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lab Orders & Prosthetics - Operations | Stackly Dental</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/dashboard.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- Floating Sidebar -->
+  <aside class="dashboard-sidebar" id="sidebar">
+    <div class="sidebar-header">
+      <a href="index.html" class="sidebar-logo">
+        <img src="images/logo-stackly.webp" alt="Stackly Dental" style="filter: brightness(0);" />
+      </a>
+      <button class="sidebar-close" id="sidebarClose" aria-label="Close menu">&times;</button>
+    </div>
+
+    <div class="sidebar-user">
+      <div class="sidebar-avatar" id="sb-avatar">SC</div>
+      <div class="sidebar-user-info">
+        <h4 id="topbar-name">Dr. Sarah Chen</h4>
+        <span class="role-badge role-admin" id="sb-role">Chief Orthodontist</span>
+      </div>
+    </div>
+
+    <nav class="sidebar-nav">
+      <div class="nav-label">Overview</div>
+      <a href="dashboard.html" class="sidebar-link">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+        Dashboard
+      </a>
+      <a href="analytics.html" class="sidebar-link">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+        Analytics
+      </a>
+      
+      <div class="nav-label">Clinic Management</div>
+      <a href="appointments.html" class="sidebar-link">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+        Appointments
+      </a>
+      <a href="patients.html" class="sidebar-link">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
+        Patients
+      </a>
+      <a href="team.html" class="sidebar-link">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+        Our Team
+      </a>
+      
+      <div class="nav-label">Operations</div>
+      <a href="billing.html" class="sidebar-link">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="5" width="20" height="14" rx="2"/><line x1="2" y1="10" x2="22" y2="10"/></svg>
+        Billing & Invoices
+      </a>
+      <a href="inventory.html" class="sidebar-link">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>
+        Inventory
+      </a>
+      <a href="lab-orders.html" class="sidebar-link active">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+        Lab Orders & Prosthetics
+      </a>
+      <a href="prescriptions.html" class="sidebar-link">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="12" y1="8" x2="12" y2="16"/><line x1="8" y1="12" x2="16" y2="12"/></svg>
+        Prescriptions Log
+      </a>
+    </nav>
+    
+    <div class="sidebar-footer">
+      <button class="btn btn-outline" style="width:100%;justify-content:center;" onclick="authLogout()">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 21H5a2 2 0 01-2-2V5a2 2 0 012-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/></svg>
+        Sign Out
+      </button>
+    </div>
+  </aside>
+
+  <!-- Main Content -->
+  <main class="dashboard-main">
+    <header class="dashboard-topbar">
+      <div class="topbar-left">
+        <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Open menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button>
+        <h1 class="dashboard-title">Dental Lab Orders</h1>
+      </div>
+      <div class="topbar-right">
+        <div class="topbar-actions">
+          <button class="btn btn-primary btn-sm" onclick="window.location.href='404.html'">+ Send Lab Ticket</button>
+        </div>
+        <div class="topbar-avatar" id="topbarAvatar">S</div>
+      </div>
+    </header>
+
+    <div class="dashboard-content">
+      
+      <!-- Lab KPIs -->
+      <div class="dash-stats-grid">
+        <div class="dash-stat-card" style="border-left:4px solid var(--accent);">
+          <div class="dash-stat-icon" style="background:var(--accent-bg); color:var(--accent);">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+          </div>
+          <div class="dash-stat-info">
+            <h4>Active Lab Orders</h4>
+            <div class="val">14 Cases</div>
+            <div class="dash-stat-trend trend-up"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/></svg> 4 in CAD &bull; 5 in Milling</div>
+          </div>
+        </div>
+
+        <div class="dash-stat-card" style="border-left:4px solid var(--success);">
+          <div class="dash-stat-icon" style="background:var(--success-bg); color:var(--success);">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+          </div>
+          <div class="dash-stat-info">
+            <h4>Ready for Seating</h4>
+            <div class="val">5 Cases</div>
+            <div class="dash-stat-trend trend-up">Inspected & sterile in tray</div>
+          </div>
+        </div>
+
+        <div class="dash-stat-card" style="border-left:4px solid var(--warning);">
+          <div class="dash-stat-icon" style="background:var(--warning-bg); color:var(--warning);">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          </div>
+          <div class="dash-stat-info">
+            <h4>Due This Week</h4>
+            <div class="val">7 Cases</div>
+            <div class="dash-stat-trend">All within delivery SLA</div>
+          </div>
+        </div>
+
+        <div class="dash-stat-card" style="border-left:4px solid var(--info);">
+          <div class="dash-stat-icon" style="background:var(--info-bg); color:var(--info);">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+          </div>
+          <div class="dash-stat-info">
+            <h4>Remake Rate</h4>
+            <div class="val">0.8%</div>
+            <div class="dash-stat-trend trend-up">Industry benchmark &lt; 3%</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Filter Bar -->
+      <div class="filter-bar" style="margin-bottom:1.5rem;">
+        <div class="search-input">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          <input type="text" placeholder="Search by patient, order ID, or restoration..." />
+        </div>
+        <select class="filter-select" onchange="window.location.href='404.html'">
+          <option>All Laboratories</option>
+          <option>Apex Precision Dental Lab</option>
+          <option>DuraDent Ceramics Hub</option>
+          <option>Invisalign Align Tech</option>
+          <option>Glidewell Dental Lab</option>
+        </select>
+        <select class="filter-select" onchange="window.location.href='404.html'">
+          <option>All Restoration Types</option>
+          <option>Zirconia Crown / Bridge</option>
+          <option>E-Max Lithium Disilicate</option>
+          <option>Clear Aligners</option>
+          <option>Custom Implant Abutment</option>
+          <option>Nightguards & Splints</option>
+        </select>
+        <button class="btn btn-outline btn-sm filter-btn" onclick="window.location.href='404.html'">Filter</button>
+      </div>
+
+      <!-- Main Lab Tracking Table -->
+      <div class="dash-panel" style="margin-bottom:2rem;">
+        <div class="dash-panel-header" style="display:flex; justify-content:space-between; align-items:center;">
+          <h3 class="dash-panel-title">Active Prosthetics & Orthodontic Lab Tickets</h3>
+          <span style="font-size:0.8rem; color:var(--text-muted);">Real-time CAD/CAM & Courier status</span>
+        </div>
+
+        <div class="table-wrapper">
+          <table>
+            <thead>
+              <tr>
+                <th>Ticket ID</th>
+                <th>Patient & Tooth</th>
+                <th>Restoration Type</th>
+                <th>Laboratory Partner</th>
+                <th>Shade & Specs</th>
+                <th>Production Stage</th>
+                <th>Target Date</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td style="font-family:monospace;font-weight:700;color:var(--primary);">#LAB-941</td>
+                <td>
+                  <div style="font-weight:600;">Michael Chen</div>
+                  <div style="font-size:0.75rem;color:var(--text-muted);">Tooth #19 (Mandibular Molar)</div>
+                </td>
+                <td>3D Monolithic Zirconia Full Crown</td>
+                <td>Apex Precision Dental Lab</td>
+                <td>
+                  <span class="rx-badge">VITA A2</span>
+                  <span class="rx-badge">Glazed</span>
+                </td>
+                <td>
+                  <div class="lab-stepper">
+                    <span class="lab-step step-done">&check; Scan</span>
+                    <span class="lab-step step-done">&check; CAD</span>
+                    <span class="lab-step step-done">&check; Milling</span>
+                    <span class="lab-step step-active">In Transit</span>
+                  </div>
+                </td>
+                <td><strong style="color:var(--accent);">Tomorrow</strong> (Oct 07)</td>
+                <td><button class="btn btn-outline btn-sm" style="padding:0.3rem 0.6rem;" onclick="window.location.href='404.html'">Track</button></td>
+              </tr>
+
+              <tr>
+                <td style="font-family:monospace;font-weight:700;color:var(--primary);">#LAB-940</td>
+                <td>
+                  <div style="font-weight:600;">Emily Thorne</div>
+                  <div style="font-size:0.75rem;color:var(--text-muted);">Teeth #7, #8, #9, #10 (Anterior)</div>
+                </td>
+                <td>IPS e.max Press Ceramic Veneers (x4)</td>
+                <td>DuraDent Ceramics Hub</td>
+                <td>
+                  <span class="rx-badge">BL2 Bleach</span>
+                  <span class="rx-badge">High Translucency</span>
+                </td>
+                <td>
+                  <div class="lab-stepper">
+                    <span class="lab-step step-done">&check; Scan</span>
+                    <span class="lab-step step-active">Master Wax-up</span>
+                    <span class="lab-step">Layering</span>
+                    <span class="lab-step">Delivery</span>
+                  </div>
+                </td>
+                <td>Oct 10, 2026</td>
+                <td><button class="btn btn-outline btn-sm" style="padding:0.3rem 0.6rem;" onclick="window.location.href='404.html'">Photos</button></td>
+              </tr>
+
+              <tr>
+                <td style="font-family:monospace;font-weight:700;color:var(--primary);">#LAB-939</td>
+                <td>
+                  <div style="font-weight:600;">David Kumar</div>
+                  <div style="font-size:0.75rem;color:var(--text-muted);">Upper & Lower Arches</div>
+                </td>
+                <td>Invisalign Comprehensive (Stage 1-14)</td>
+                <td>Align Technology Global</td>
+                <td>
+                  <span class="rx-badge">SmartTrack</span>
+                  <span class="rx-badge">0.25mm IPR</span>
+                </td>
+                <td>
+                  <div class="lab-stepper">
+                    <span class="lab-step step-done">&check; ClinCheck</span>
+                    <span class="lab-step step-done">&check; 3D Print</span>
+                    <span class="lab-step step-done">&check; Thermoform</span>
+                    <span class="lab-step step-done" style="background:var(--success-bg);color:var(--success);">&check; Clinic Received</span>
+                  </div>
+                </td>
+                <td><span class="status-badge status-healthy">Ready to Seat</span></td>
+                <td><button class="btn btn-primary btn-sm" style="padding:0.3rem 0.6rem;" onclick="window.location.href='404.html'">Ready Tray</button></td>
+              </tr>
+
+              <tr>
+                <td style="font-family:monospace;font-weight:700;color:var(--primary);">#LAB-938</td>
+                <td>
+                  <div style="font-weight:600;">Sarah Jenkins</div>
+                  <div style="font-size:0.75rem;color:var(--text-muted);">Tooth #14 & #30</div>
+                </td>
+                <td>Titanium Custom Implant Abutment + PFM</td>
+                <td>Glidewell Laboratories</td>
+                <td>
+                  <span class="rx-badge">VITA A3</span>
+                  <span class="rx-badge">Subgingival Margin</span>
+                </td>
+                <td>
+                  <div class="lab-stepper">
+                    <span class="lab-step step-done">&check; Scan</span>
+                    <span class="lab-step step-done">&check; Ti Milling</span>
+                    <span class="lab-step step-done">&check; Ceramic Bake</span>
+                    <span class="lab-step step-done" style="background:var(--success-bg);color:var(--success);">&check; In Clinic</span>
+                  </div>
+                </td>
+                <td><span class="status-badge status-healthy">Ready to Seat</span></td>
+                <td><button class="btn btn-primary btn-sm" style="padding:0.3rem 0.6rem;" onclick="window.location.href='404.html'">Ready Tray</button></td>
+              </tr>
+
+              <tr>
+                <td style="font-family:monospace;font-weight:700;color:var(--primary);">#LAB-937</td>
+                <td>
+                  <div style="font-weight:600;">Robert Fox</div>
+                  <div style="font-size:0.75rem;color:var(--text-muted);">Full Maxillary Arch</div>
+                </td>
+                <td>Premium Valplast Flexible Partial Denture</td>
+                <td>Apex Precision Dental Lab</td>
+                <td>
+                  <span class="rx-badge">Shade 2M1</span>
+                  <span class="rx-badge">Clear Clasps</span>
+                </td>
+                <td>
+                  <div class="lab-stepper">
+                    <span class="lab-step step-done">&check; Impression</span>
+                    <span class="lab-step step-done">&check; Try-In Teeth</span>
+                    <span class="lab-step step-active">Final Acrylization</span>
+                    <span class="lab-step">Finishing</span>
+                  </div>
+                </td>
+                <td>Oct 12, 2026</td>
+                <td><button class="btn btn-outline btn-sm" style="padding:0.3rem 0.6rem;" onclick="window.location.href='404.html'">Specs</button></td>
+              </tr>
+
+              <tr>
+                <td style="font-family:monospace;font-weight:700;color:var(--primary);">#LAB-936</td>
+                <td>
+                  <div style="font-weight:600;">Ananya Roy</div>
+                  <div style="font-size:0.75rem;color:var(--text-muted);">Bruxism Full Upper</div>
+                </td>
+                <td>Dual-Laminate Hard/Soft Occlusal Splint</td>
+                <td>DuraDent Ceramics Hub</td>
+                <td>
+                  <span class="rx-badge">3.0mm</span>
+                  <span class="rx-badge">Canine Rise</span>
+                </td>
+                <td>
+                  <div class="lab-stepper">
+                    <span class="lab-step step-done">&check; Scan</span>
+                    <span class="lab-step step-done">&check; CAD</span>
+                    <span class="lab-step step-done">&check; Print</span>
+                    <span class="lab-step step-done" style="background:var(--success-bg);color:var(--success);">&check; In Clinic</span>
+                  </div>
+                </td>
+                <td><span class="status-badge status-healthy">Ready to Seat</span></td>
+                <td><button class="btn btn-primary btn-sm" style="padding:0.3rem 0.6rem;" onclick="window.location.href='404.html'">Ready Tray</button></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Partner Labs Summary & Digital CAD integration -->
+      <div class="dash-row">
+        <div class="dash-panel">
+          <div class="dash-panel-header">
+            <h3 class="dash-panel-title">Laboratory Partner Performance</h3>
+          </div>
+          <div style="padding:1.25rem;">
+            <div style="margin-bottom:1.25rem;">
+              <div style="display:flex; justify-content:space-between; margin-bottom:0.35rem; font-size:0.88rem;">
+                <strong>Apex Precision Dental Lab</strong>
+                <span style="color:var(--success); font-weight:700;">99.2% On-Time (Avg 3.8 days)</span>
+              </div>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar-fill fill-green" style="width:99%;"></div>
+              </div>
+            </div>
+
+            <div style="margin-bottom:1.25rem;">
+              <div style="display:flex; justify-content:space-between; margin-bottom:0.35rem; font-size:0.88rem;">
+                <strong>DuraDent Ceramics Hub (Cosmetics)</strong>
+                <span style="color:var(--accent); font-weight:700;">96.8% On-Time (Avg 5.1 days)</span>
+              </div>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar-fill" style="width:96%;"></div>
+              </div>
+            </div>
+
+            <div>
+              <div style="display:flex; justify-content:space-between; margin-bottom:0.35rem; font-size:0.88rem;">
+                <strong>Align Technology (Invisalign USA)</strong>
+                <span style="color:var(--info); font-weight:700;">100% On-Time (Avg 8.0 days int'l)</span>
+              </div>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar-fill" style="background:var(--info); width:100%;"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="dash-panel">
+          <div class="dash-panel-header">
+            <h3 class="dash-panel-title">Digital Intraoral Scanner Uploads</h3>
+          </div>
+          <div style="padding:1.25rem;">
+            <div style="display:flex; align-items:center; gap:1rem; padding:0.75rem 0; border-bottom:1px solid var(--border-light);">
+              <div style="width:40px; height:40px; border-radius:8px; background:var(--accent-bg); color:var(--accent); display:flex; align-items:center; justify-content:center;">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
+              </div>
+              <div style="flex:1;">
+                <div style="font-weight:600; font-size:0.9rem;">iTero Element 5D Plus</div>
+                <div style="font-size:0.78rem; color:var(--text-muted);">Synced to Align Cloud &bull; 8 Scans uploaded today</div>
+              </div>
+              <span class="status-badge status-healthy">Online</span>
+            </div>
+
+            <div style="display:flex; align-items:center; gap:1rem; padding:0.75rem 0;">
+              <div style="width:40px; height:40px; border-radius:8px; background:var(--warm-bg); color:var(--warm); display:flex; align-items:center; justify-content:center;">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+              </div>
+              <div style="flex:1;">
+                <div style="font-weight:600; font-size:0.9rem;">3Shape TRIOS 4 Wireless</div>
+                <div style="font-size:0.78rem; color:var(--text-muted);">Direct STL/PLY export to Apex Lab server</div>
+              </div>
+              <span class="status-badge status-healthy">Online</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <div id="toast-container"></div>
+  <script src="js/auth.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      authProtectRoute();
+      authApplyRBAC();
+    });
+  </script>
+</body>
+</html>

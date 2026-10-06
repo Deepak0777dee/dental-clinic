@@ -1,0 +1,157 @@
+/* ============================================
+   STACKLY DENTAL CLINIC
+   Auth Pages — Login & Signup
+   ============================================ */
+
+.auth-page {
+  min-height: 100vh;
+  display: flex;
+  background: var(--bg);
+  position: relative;
+}
+
+.auth-page::before {
+  content: '';
+  flex: 1;
+  background-image: linear-gradient(135deg, rgba(26, 43, 60, 0.4) 0%, rgba(43, 168, 157, 0.6) 100%), url('../images/dental_clinic_interior.webp');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: none;
+}
+
+@media (min-width: 900px) {
+  .auth-page::before {
+    display: block;
+  }
+}
+
+.back-btn-top {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 0.5rem;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  font-weight: 600;
+  transition: color var(--transition);
+  text-decoration: none;
+  z-index: 10;
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius-full);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-sm);
+}
+.back-btn-top:hover {
+  color: var(--accent);
+  border-color: var(--accent);
+}
+
+.auth-card {
+  width: 100%;
+  max-width: 500px;
+  background: var(--surface);
+  padding: 4rem 3rem;
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-shadow: -20px 0 50px rgba(26, 43, 60, 0.08);
+}
+
+@media (min-width: 900px) {
+  .auth-card {
+    width: 500px;
+  }
+}
+
+.auth-logo {
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 3rem;
+}
+.auth-logo img { height: 36px; }
+
+.auth-title {
+  text-align: left;
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: var(--text);
+  margin-bottom: 0.5rem;
+}
+.auth-subtitle {
+  text-align: left;
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  margin-bottom: 2.5rem;
+}
+
+.auth-footer {
+  text-align: left;
+  margin-top: 2rem;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+.auth-footer a {
+  color: var(--accent);
+  font-weight: 600;
+  transition: color var(--transition);
+}
+.auth-footer a:hover { color: var(--accent-dark); }
+
+.role-selector {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+.role-option {
+  padding: 0.8rem;
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius-lg);
+  text-align: left;
+  cursor: pointer;
+  transition: all var(--transition);
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  background: var(--bg);
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+.role-option:hover {
+  border-color: var(--accent);
+  color: var(--text);
+  background: var(--accent-bg);
+}
+.role-option.active {
+  border-color: var(--accent);
+  background: var(--accent-bg);
+  color: var(--accent);
+  box-shadow: 0 0 15px rgba(43, 168, 157, 0.1);
+}
+.role-option svg {
+  width: 22px;
+  height: 22px;
+  margin: 0;
+}
+
+@media (max-width: 480px) {
+  .auth-card {
+    padding: 2rem 1.5rem;
+    box-shadow: none;
+  }
+  .role-selector {
+    grid-template-columns: 1fr;
+  }
+  .back-btn-top {
+    top: 1rem;
+    right: 1rem;
+  }
+}

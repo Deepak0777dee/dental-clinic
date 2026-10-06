@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pricing | Stackly Dental Clinic</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+</head>
+<body>
+  <div id="page-loader">
+    <div style="position:relative;display:flex;align-items:center;justify-content:center;">
+      <div class="loader-logo"><img src="images/logo-stackly.webp" alt="Stackly Dental" /></div>
+      <div class="loader-ring"></div>
+    </div>
+  </div>
+
+  <header class="header" id="mainHeader">
+    <div class="header-inner">
+      <a href="index.html" class="header-logo"><img src="images/logo-stackly.webp" alt="Stackly Dental" style="filter: brightness(0);" /></a>
+      <nav class="header-nav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="services.html">Services</a>
+        <a href="pricing.html" class="active">Pricing</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <div class="header-actions">
+        <a href="login.html" class="btn btn-outline btn-sm">Sign In</a>
+        <a href="signup.html" class="btn btn-primary btn-sm">Book Appointment</a>
+      </div>
+      <button class="ham-btn" id="hamBtn"><svg class="ham-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg><svg class="close-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
+      <div class="mobile-overlay"></div>
+      <div class="mobile-sidebar">
+        <nav class="header-nav">
+          <a href="index.html">Home</a>
+          <a href="about.html">About Us</a>
+          <a href="services.html">Services</a>
+          <a href="pricing.html" class="active">Pricing</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+        <div class="header-actions">
+          <a href="login.html" class="btn btn-outline btn-sm" style="width:100%;justify-content:center;">Sign In</a>
+          <a href="signup.html" class="btn btn-primary btn-sm" style="width:100%;justify-content:center;">Book Appointment</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <section class="page-hero">
+    <div class="container">
+      <div class="section-label" style="justify-content:center;">Transparent Costs</div>
+      <h1>Simple & Clear Pricing</h1>
+      <p>Premium dental care should be accessible. We offer transparent pricing with no hidden fees, and flexible payment plans to fit your budget.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="pricing-grid">
+        <!-- Basic Care -->
+        <div class="pricing-card">
+          <h3>Preventive Care</h3>
+          <p style="color:var(--text-muted); font-size:0.85rem; margin-bottom:1rem;">Essential maintenance for a healthy smile</p>
+          <div class="pricing-price">₹1,500<span> / visit</span></div>
+          <ul class="pricing-features">
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Comprehensive Oral Exam</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Digital X-Rays (if needed)</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Professional Ultrasonic Cleaning</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Fluoride Treatment</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Oral Cancer Screening</li>
+          </ul>
+          <a href="signup.html" class="btn btn-outline" style="width:100%;justify-content:center;">Book Routine Checkup</a>
+        </div>
+        
+        <!-- Premium Whitening (Popular) -->
+        <div class="pricing-card popular">
+          <div class="pricing-badge">Most Popular</div>
+          <h3>Laser Whitening</h3>
+          <p style="color:var(--text-muted); font-size:0.85rem; margin-bottom:1rem;">Instantly brighten your smile up to 8 shades</p>
+          <div class="pricing-price">₹8,000<span> / session</span></div>
+          <ul class="pricing-features">
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Philips Zoom Advanced Tech</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Desensitizing Treatment</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Immediate Visible Results</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Free Post-Care Kit included</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> 1-Hour Painless Procedure</li>
+          </ul>
+          <a href="signup.html" class="btn btn-primary" style="width:100%;justify-content:center;">Book Whitening</a>
+        </div>
+        
+        <!-- Restorative -->
+        <div class="pricing-card">
+          <h3>Smile Makeover</h3>
+          <p style="color:var(--text-muted); font-size:0.85rem; margin-bottom:1rem;">Customized cosmetic and restorative plan</p>
+          <div class="pricing-price">Custom</div>
+          <ul class="pricing-features">
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> 3D Smile Design Preview</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Porcelain Veneers / Crowns</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Invisalign / Implants Options</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Dedicated Case Manager</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Flexible EMI Options Available</li>
+          </ul>
+          <a href="contact.html" class="btn btn-outline" style="width:100%;justify-content:center;">Request Consultation</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Insurance & Payment -->
+  <section class="section" style="background: var(--bg-card); border-top: 1px solid var(--border-light);">
+    <div class="container">
+      <div class="text-center" style="max-width: 700px; margin: 0 auto 3rem;">
+        <h2 class="section-title reveal">Insurance & Financing</h2>
+        <p class="section-subtitle reveal">We accept all major dental insurance plans. Our administrative team will happily process your claims to maximize your benefits.</p>
+      </div>
+      
+      <div class="partners-logos reveal" style="margin-bottom: 4rem;">
+        <span>Bajaj Finserv</span>
+        <span>CareHealth</span>
+        <span>Star Health</span>
+        <span>HDFC ERGO</span>
+        <span>ICICI Lombard</span>
+      </div>
+      
+      <div class="split-grid" style="background: var(--bg-subtle); border-radius: var(--radius-2xl); padding: 3rem; align-items: center;">
+        <div class="reveal-left">
+          <h3 style="font-size:1.75rem; margin-bottom: 1rem;">Need flexible payments?</h3>
+          <p style="color:var(--text-muted); margin-bottom: 1.5rem;">We offer 0% interest EMI options up to 12 months for extensive treatments like Implants and Orthodontics, making your dream smile totally affordable.</p>
+          <a href="contact.html" class="btn btn-accent">Talk to our Billing Specialist</a>
+        </div>
+        <div class="reveal-right" style="text-align:center;">
+          <div class="big-stat" style="font-size: 4rem;">0%</div>
+          <h4 style="color:var(--text-secondary);">Interest on EMIs</h4>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer-ref">
+    <div class="footer-ref-container">
+      <div class="footer-ref-top">
+        <a href="index.html" class="footer-ref-logo">
+          <img src="images/logo-stackly.webp" alt="Stackly Dental" style="filter: brightness(0);" />
+        </a>
+        <div class="footer-ref-top-contacts">
+          <a href="tel:+917010792745" class="footer-ref-top-pill" title="Call Clinic Directly">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+            <span>+91 70107 92745</span>
+          </a>
+          <a href="mailto:hello@stacklydental.com" class="footer-ref-top-pill footer-ref-email" title="Send Email">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            <span>hello@stacklydental.com</span>
+          </a>
+          <a href="contact.html" class="btn-pill-dark" style="padding: 0.52rem 1.35rem; font-size: 0.84rem;">
+            Contact Us <span>&rarr;</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-ref-grid">
+        <div class="footer-ref-brand">
+          <p>Empowering your smile journey with gentle, innovative, and reliable dental care.</p>
+          <a href="signup.html" class="btn-pill-dark" style="padding: 0.65rem 1.6rem; font-size: 0.88rem;">
+            Book Appointment <span>&rarr;</span>
+          </a>
+        </div>
+
+        <div class="footer-ref-col">
+          <h4>Navigations</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="services.html">Services & Treatments</a></li>
+            <li><a href="pricing.html">Pricing & Plans</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-ref-col">
+          <h4>Treatments</h4>
+          <ul>
+            <li><a href="services.html#cleaning">Revitalized Cleaning</a></li>
+            <li><a href="services.html#whitening">Teeth Whitening</a></li>
+            <li><a href="services.html#implants">Dental Implants</a></li>
+            <li><a href="services.html#orthodontics">Orthodontics & Aligners</a></li>
+            <li><a href="contact.html#emergency">Emergency Dental Care</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-ref-col">
+          <h4>Contact & Location</h4>
+          <ul class="footer-contact-list">
+            <li class="footer-contact-item">
+              <div class="footer-contact-icon">
+                <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+              </div>
+              <div>
+                <a href="tel:+917010792745" class="footer-contact-link" title="Call Main Clinic">
+                  <strong>+91 70107 92745</strong>
+                  <small>Call Direct / WhatsApp</small>
+                </a>
+              </div>
+            </li>
+            <li class="footer-contact-item">
+              <div class="footer-contact-icon">
+                <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              </div>
+              <div>
+                <a href="mailto:hello@stacklydental.com" class="footer-contact-link" title="Email Consultation">
+                  <strong>hello@stacklydental.com</strong>
+                  <small>Online Enquiries & Support</small>
+                </a>
+              </div>
+            </li>
+            <li class="footer-contact-item">
+              <div class="footer-contact-icon">
+                <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              </div>
+              <div>
+                <a href="https://maps.google.com/?q=MMR+Complex+Chinna+Thirupathi+Salem+Tamil+Nadu+636008" target="_blank" rel="noopener" class="footer-contact-link" title="Open Clinic in Google Maps">
+                  <strong>MMR Complex, Chinna Thirupathi</strong>
+                  <small>Salem, Tamil Nadu 636008 <span class="nav-hint-arrow">&nearr;</span></small>
+                </a>
+              </div>
+            </li>
+            <li class="footer-contact-item">
+              <div class="footer-contact-icon">
+                <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              </div>
+              <div>
+                <a href="contact.html#hours" class="footer-contact-link" title="Clinic Schedule">
+                  <strong>Mon &ndash; Sat: 9:00 AM &ndash; 7:00 PM</strong>
+                  <span class="emergency-badge"><span class="emergency-pulse-dot"></span> 24/7 Emergency Care</span>
+                </a>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="footer-ref-col">
+          <h4>Subscribe newsletter</h4>
+          <p style="font-size: 0.92rem; color: #586465; margin-bottom: 0.75rem;">Stay updated with the latest dental tips and member offers!</p>
+          <form onsubmit="event.preventDefault(); alert('Thank you for subscribing to Stackly Dental!');" class="newsletter-pill-input">
+            <input type="email" placeholder="Email address" required />
+            <button type="submit" aria-label="Subscribe">&rarr;</button>
+          </form>
+          <div style="margin-top: 1.25rem; display: flex; gap: 0.75rem;">
+            <a href="contact.html" class="btn btn-outline btn-sm" style="font-size: 0.8rem; padding: 0.4rem 0.9rem;">Ask a Question</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-ref-bottom">
+        <p>Copyright &copy; Stackly&reg; 2026. All rights reserved.</p>
+        <div class="footer-ref-socials">
+          <a href="#" aria-label="YouTube"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></a>
+          <a href="#" aria-label="LinkedIn"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg></a>
+          <a href="#" aria-label="Instagram"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+          <a href="#" aria-label="Facebook"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="js/main.js"></script>
+  <script src="js/animations.js"></script>
+</body>
+</html>

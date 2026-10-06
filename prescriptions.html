@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Prescriptions Log - Operations | Stackly Dental</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/dashboard.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- Floating Sidebar -->
+  <aside class="dashboard-sidebar" id="sidebar">
+    <div class="sidebar-header">
+      <a href="index.html" class="sidebar-logo">
+        <img src="images/logo-stackly.webp" alt="Stackly Dental" style="filter: brightness(0);" />
+      </a>
+      <button class="sidebar-close" id="sidebarClose" aria-label="Close menu">&times;</button>
+    </div>
+
+    <div class="sidebar-user">
+      <div class="sidebar-avatar" id="sb-avatar">SC</div>
+      <div class="sidebar-user-info">
+        <h4 id="topbar-name">Dr. Sarah Chen</h4>
+        <span class="role-badge role-admin" id="sb-role">Chief Orthodontist</span>
+      </div>
+    </div>
+
+    <nav class="sidebar-nav">
+      <div class="nav-label">Overview</div>
+      <a href="dashboard.html" class="sidebar-link">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+        Dashboard
+      </a>
+      <a href="analytics.html" class="sidebar-link">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+        Analytics
+      </a>
+      
+      <div class="nav-label">Clinic Management</div>
+      <a href="appointments.html" class="sidebar-link">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+        Appointments
+      </a>
+      <a href="patients.html" class="sidebar-link">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
+        Patients
+      </a>
+      <a href="team.html" class="sidebar-link">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+        Our Team
+      </a>
+      
+      <div class="nav-label">Operations</div>
+      <a href="billing.html" class="sidebar-link">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="5" width="20" height="14" rx="2"/><line x1="2" y1="10" x2="22" y2="10"/></svg>
+        Billing & Invoices
+      </a>
+      <a href="inventory.html" class="sidebar-link">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>
+        Inventory
+      </a>
+      <a href="lab-orders.html" class="sidebar-link">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+        Lab Orders & Prosthetics
+      </a>
+      <a href="prescriptions.html" class="sidebar-link active">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="12" y1="8" x2="12" y2="16"/><line x1="8" y1="12" x2="16" y2="12"/></svg>
+        Prescriptions Log
+      </a>
+    </nav>
+    
+    <div class="sidebar-footer">
+      <button class="btn btn-outline" style="width:100%;justify-content:center;" onclick="authLogout()">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 21H5a2 2 0 01-2-2V5a2 2 0 012-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/></svg>
+        Sign Out
+      </button>
+    </div>
+  </aside>
+
+  <!-- Main Content -->
+  <main class="dashboard-main">
+    <header class="dashboard-topbar">
+      <div class="topbar-left">
+        <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Open menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button>
+        <h1 class="dashboard-title">Prescriptions & Pharmacy</h1>
+      </div>
+      <div class="topbar-right">
+        <div class="topbar-actions">
+          <button class="btn btn-primary btn-sm" onclick="window.location.href='404.html'">+ Write e-Prescription</button>
+        </div>
+        <div class="topbar-avatar" id="topbarAvatar">S</div>
+      </div>
+    </header>
+
+    <div class="dashboard-content">
+      
+      <!-- Pharmacy KPIs -->
+      <div class="dash-stats-grid">
+        <div class="dash-stat-card" style="border-left:4px solid var(--accent);">
+          <div class="dash-stat-icon" style="background:var(--accent-bg); color:var(--accent);">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="12" y1="8" x2="12" y2="16"/><line x1="8" y1="12" x2="16" y2="12"/></svg>
+          </div>
+          <div class="dash-stat-info">
+            <h4>Issued Today</h4>
+            <div class="val">19 Rx</div>
+            <div class="dash-stat-trend trend-up"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/></svg> 100% Digitally Signed</div>
+          </div>
+        </div>
+
+        <div class="dash-stat-card" style="border-left:4px solid var(--success);">
+          <div class="dash-stat-icon" style="background:var(--success-bg); color:var(--success);">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+          </div>
+          <div class="dash-stat-info">
+            <h4>Dispensed In-Clinic</h4>
+            <div class="val">14 Orders</div>
+            <div class="dash-stat-trend trend-up">Stock automatically deducted</div>
+          </div>
+        </div>
+
+        <div class="dash-stat-card" style="border-left:4px solid var(--warning);">
+          <div class="dash-stat-icon" style="background:var(--warning-bg); color:var(--warning);">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+          </div>
+          <div class="dash-stat-info">
+            <h4>Refill Requests</h4>
+            <div class="val">2 Pending</div>
+            <div class="dash-stat-trend">Awaiting doctor review</div>
+          </div>
+        </div>
+
+        <div class="dash-stat-card" style="border-left:4px solid var(--info);">
+          <div class="dash-stat-icon" style="background:var(--info-bg); color:var(--info);">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <div class="dash-stat-info">
+            <h4>Allergy Check</h4>
+            <div class="val">Zero Conflicts</div>
+            <div class="dash-stat-trend trend-up">Automated interaction check</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Filter Bar -->
+      <div class="filter-bar" style="margin-bottom:1.5rem;">
+        <div class="search-input">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          <input type="text" placeholder="Search by patient name, Rx ID, or medication..." />
+        </div>
+        <select class="filter-select" onchange="window.location.href='404.html'">
+          <option>All Doctors</option>
+          <option>Dr. Sarah Chen (Orthodontics)</option>
+          <option>Dr. Mark Roberts (Oral Surgery)</option>
+          <option>Dr. Anita Lopez (General/Endo)</option>
+        </select>
+        <select class="filter-select" onchange="window.location.href='404.html'">
+          <option>All Drug Categories</option>
+          <option>Antibiotics (Amoxicillin, Clindamycin)</option>
+          <option>NSAIDs & Analgesics (Ketorolac, Ibuprofen)</option>
+          <option>Antiseptic Oral Rinses (Chlorhexidine)</option>
+          <option>Corticosteroids & Gels</option>
+        </select>
+        <button class="btn btn-outline btn-sm filter-btn" onclick="window.location.href='404.html'">Filter</button>
+      </div>
+
+      <!-- Main Prescriptions Table -->
+      <div class="dash-panel" style="margin-bottom:2rem;">
+        <div class="dash-panel-header" style="display:flex; justify-content:space-between; align-items:center;">
+          <h3 class="dash-panel-title">Recent Digital Prescriptions & Pharmacy Dispensing Log</h3>
+          <span style="font-size:0.8rem; color:var(--text-muted);">HIPAA & Telemedicine Compliant</span>
+        </div>
+
+        <div class="table-wrapper">
+          <table>
+            <thead>
+              <tr>
+                <th>Rx ID</th>
+                <th>Patient Details</th>
+                <th>Medication & Strength</th>
+                <th>Dosage & Frequency</th>
+                <th>Indication / Procedure</th>
+                <th>Prescribed By</th>
+                <th>Dispense Mode</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td style="font-family:monospace;font-weight:700;color:var(--primary);">#RX-1182</td>
+                <td>
+                  <div style="font-weight:600;">Michael Chen</div>
+                  <div style="font-size:0.75rem;color:var(--text-muted);">PID: #1042 &bull; 34 M</div>
+                </td>
+                <td>
+                  <strong>Augmentin (Amox-Clav) 625mg</strong>
+                  <div style="font-size:0.75rem;color:var(--text-muted);">Tab &bull; Qty: 10 tabs</div>
+                </td>
+                <td>1 Tab TID (every 8 hrs) x 5 days</td>
+                <td>Post-Op Surgical Crown Lengthening</td>
+                <td>Dr. Mark Roberts</td>
+                <td><span class="status-badge status-healthy">In-Clinic Dispensed</span></td>
+                <td>
+                  <button class="btn btn-outline btn-sm" style="padding:0.3rem 0.6rem;" onclick="window.location.href='404.html'">PDF</button>
+                  <button class="btn btn-outline btn-sm" style="padding:0.3rem 0.6rem;" onclick="window.location.href='404.html'">Share</button>
+                </td>
+              </tr>
+
+              <tr>
+                <td style="font-family:monospace;font-weight:700;color:var(--primary);">#RX-1181</td>
+                <td>
+                  <div style="font-weight:600;">Michael Chen</div>
+                  <div style="font-size:0.75rem;color:var(--text-muted);">PID: #1042 &bull; 34 M</div>
+                </td>
+                <td>
+                  <strong>Ketorolac Tromethamine 10mg</strong>
+                  <div style="font-size:0.75rem;color:var(--text-muted);">DT Tab &bull; Qty: 6 tabs</div>
+                </td>
+                <td>1 Tab SOS (max TID, PRN pain)</td>
+                <td>Post-Op Analgesia</td>
+                <td>Dr. Mark Roberts</td>
+                <td><span class="status-badge status-healthy">In-Clinic Dispensed</span></td>
+                <td>
+                  <button class="btn btn-outline btn-sm" style="padding:0.3rem 0.6rem;" onclick="window.location.href='404.html'">PDF</button>
+                  <button class="btn btn-outline btn-sm" style="padding:0.3rem 0.6rem;" onclick="window.location.href='404.html'">Share</button>
+                </td>
+              </tr>
+
+              <tr>
+                <td style="font-family:monospace;font-weight:700;color:var(--primary);">#RX-1180</td>
+                <td>
+                  <div style="font-weight:600;">Emily Thorne</div>
+                  <div style="font-size:0.75rem;color:var(--text-muted);">PID: #0893 &bull; 28 F</div>
+                </td>
+                <td>
+                  <strong>Chlorhexidine Gluconate 0.2%</strong>
+                  <div style="font-size:0.75rem;color:var(--text-muted);">Oral Rinse &bull; 150ml bottle</div>
+                </td>
+                <td>10ml swish & spit BD x 7 days</td>
+                <td>Pre-Veneer Gingival Health</td>
+                <td>Dr. Anita Lopez</td>
+                <td><span class="status-badge status-healthy">In-Clinic Dispensed</span></td>
+                <td>
+                  <button class="btn btn-outline btn-sm" style="padding:0.3rem 0.6rem;" onclick="window.location.href='404.html'">PDF</button>
+                  <button class="btn btn-outline btn-sm" style="padding:0.3rem 0.6rem;" onclick="window.location.href='404.html'">Share</button>
+                </td>
+              </tr>
+
+              <tr>
+                <td style="font-family:monospace;font-weight:700;color:var(--primary);">#RX-1179</td>
+                <td>
+                  <div style="font-weight:600;">David Kumar</div>
+                  <div style="font-size:0.75rem;color:var(--text-muted);">PID: #1205 &bull; 41 M</div>
+                </td>
+                <td>
+                  <strong>Orabase Triamcinolone 0.1%</strong>
+                  <div style="font-size:0.75rem;color:var(--text-muted);">Dental Paste &bull; 5g tube</div>
+                </td>
+                <td>Apply thin film on aligner ulceration HS</td>
+                <td>Aligner Soft Tissue Comfort</td>
+                <td>Dr. Sarah Chen</td>
+                <td><span class="status-badge status-info">Apollo Pharmacy SMS</span></td>
+                <td>
+                  <button class="btn btn-outline btn-sm" style="padding:0.3rem 0.6rem;" onclick="window.location.href='404.html'">PDF</button>
+                  <button class="btn btn-outline btn-sm" style="padding:0.3rem 0.6rem;" onclick="window.location.href='404.html'">Status</button>
+                </td>
+              </tr>
+
+              <tr>
+                <td style="font-family:monospace;font-weight:700;color:var(--primary);">#RX-1178</td>
+                <td>
+                  <div style="font-weight:600;">Sarah Jenkins</div>
+                  <div style="font-size:0.75rem;color:var(--text-muted);">PID: #0551 &bull; 52 F</div>
+                </td>
+                <td>
+                  <strong>Clindamycin Hydrochloride 300mg</strong>
+                  <div style="font-size:0.75rem;color:var(--text-muted);">Cap &bull; Qty: 16 caps</div>
+                </td>
+                <td>1 Cap QID x 4 days (Penicillin Allergy)</td>
+                <td>Peri-Implantitis Prophylaxis</td>
+                <td>Dr. Mark Roberts</td>
+                <td><span class="status-badge status-healthy">In-Clinic Dispensed</span></td>
+                <td>
+                  <button class="btn btn-outline btn-sm" style="padding:0.3rem 0.6rem;" onclick="window.location.href='404.html'">PDF</button>
+                  <button class="btn btn-outline btn-sm" style="padding:0.3rem 0.6rem;" onclick="window.location.href='404.html'">Share</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Quick Formulary Reference & Safety Protocols -->
+      <div class="dash-row">
+        <div class="dash-panel">
+          <div class="dash-panel-header">
+            <h3 class="dash-panel-title">Clinic Formulary Protocols</h3>
+          </div>
+          <div style="padding:1.25rem;">
+            <div style="margin-bottom:1rem; padding-bottom:0.75rem; border-bottom:1px solid var(--border-light);">
+              <strong style="color:var(--accent); font-size:0.9rem;">First-Line Odontogenic Infection:</strong>
+              <p style="font-size:0.84rem; color:var(--text-muted); margin:0.25rem 0 0;">Amoxicillin 500mg TID 5 days OR Augmentin 625mg BD. If severe anaerobic involvement, add Metronidazole 400mg TID.</p>
+            </div>
+            <div style="margin-bottom:1rem; padding-bottom:0.75rem; border-bottom:1px solid var(--border-light);">
+              <strong style="color:var(--primary); font-size:0.9rem;">Penicillin Allergy Protocol:</strong>
+              <p style="font-size:0.84rem; color:var(--text-muted); margin:0.25rem 0 0;">Clindamycin 300mg QID 5 days OR Azithromycin 500mg OD for 3 days.</p>
+            </div>
+            <div>
+              <strong style="color:var(--warm); font-size:0.9rem;">Endodontic & Extraction Analgesia:</strong>
+              <p style="font-size:0.84rem; color:var(--text-muted); margin:0.25rem 0 0;">Ketorolac 10mg sublingual SOS post-procedure, followed by Aceclofenac 100mg + Paracetamol 325mg BD after food.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="dash-panel">
+          <div class="dash-panel-header">
+            <h3 class="dash-panel-title">Pharmacy Stock Depletion Alerts</h3>
+          </div>
+          <div style="padding:1.25rem;">
+            <div style="display:flex; justify-content:space-between; align-items:center; padding:0.6rem 0; border-bottom:1px solid var(--border-light);">
+              <div>
+                <strong style="font-size:0.88rem;">Augmentin 625mg Strips</strong>
+                <div style="font-size:0.78rem; color:var(--text-muted);">Current: 14 strips &bull; Min: 10 strips</div>
+              </div>
+              <span class="status-badge status-healthy">Sufficient</span>
+            </div>
+            <div style="display:flex; justify-content:space-between; align-items:center; padding:0.6rem 0; border-bottom:1px solid var(--border-light);">
+              <div>
+                <strong style="font-size:0.88rem;">Chlorhexidine 0.2% 150ml</strong>
+                <div style="font-size:0.78rem; color:var(--text-muted);">Current: 5 bottles &bull; Min: 8 bottles</div>
+              </div>
+              <span class="status-badge status-warning">Low Stock</span>
+            </div>
+            <div style="display:flex; justify-content:space-between; align-items:center; padding:0.6rem 0;">
+              <div>
+                <strong style="font-size:0.88rem;">Mepivacaine 3% Plain (No Epi)</strong>
+                <div style="font-size:0.78rem; color:var(--text-muted);">Current: 12 cartridges &bull; For Cardiac Patients</div>
+              </div>
+              <span class="status-badge status-healthy">Optimal</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <div id="toast-container"></div>
+  <script src="js/auth.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      authProtectRoute();
+      authApplyRBAC();
+    });
+  </script>
+</body>
+</html>

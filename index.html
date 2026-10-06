@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Stackly Dental Clinic | Seamless Dental Care</title>
+  <meta name="description" content="A Smooth and Hassle-Free Dental Care Experience for a Healthy and Confident Smile. Stackly Dental Clinic offers modern, gentle dental care." />
+  <link rel="stylesheet" href="css/style.css" />
+  <!-- GSAP for animations -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+</head>
+<body style="background: #faf7f2; color: #162223;">
+
+  <!-- Page Loader -->
+  <div id="page-loader">
+    <div style="position:relative;display:flex;align-items:center;justify-content:center;">
+      <div class="loader-logo"><img src="images/logo-stackly.webp" alt="Stackly Dental" /></div>
+      <div class="loader-ring"></div>
+    </div>
+  </div>
+
+  <!-- Header (Common across all pages) -->
+  <header class="header" id="mainHeader">
+    <div class="header-inner">
+      <a href="index.html" class="header-logo"><img src="images/logo-stackly.webp" alt="Stackly Dental" style="filter: brightness(0);" /></a>
+      <nav class="header-nav">
+        <a href="index.html" class="active">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="services.html">Services</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <div class="header-actions">
+        <a href="login.html" class="btn btn-outline btn-sm">Sign In</a>
+        <a href="signup.html" class="btn btn-primary btn-sm">Book Appointment</a>
+      </div>
+      <button class="ham-btn" id="hamBtn" aria-label="Menu">
+        <svg class="ham-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+        <svg class="close-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+      <div class="mobile-overlay"></div>
+      <div class="mobile-sidebar">
+        <nav class="header-nav">
+          <a href="index.html" class="active">Home</a>
+          <a href="about.html">About Us</a>
+          <a href="services.html">Services</a>
+          <a href="pricing.html">Pricing</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+        <div class="header-actions">
+          <a href="login.html" class="btn btn-outline btn-sm" style="width:100%;justify-content:center;">Sign In</a>
+          <a href="signup.html" class="btn btn-primary btn-sm" style="width:100%;justify-content:center;">Book Appointment</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO SECTION (Full-Bleed Editorial Layout Matching Reference) -->
+  <section class="hero-ref">
+    <!-- Seamless Full-Bleed Face on the Right (No card border) -->
+    <div class="hero-ref-bleed-face">
+      <img src="images/hero_teeth_smile.webp" alt="Radiant Seamless Dental Smile" />
+    </div>
+
+    <!-- 4-Pointed Sparkle Stars Matching Reference -->
+    <span class="sparkle-star sp-1">
+      <svg viewBox="0 0 24 24" width="22" height="22" fill="#162223"><path d="M12 0C12 7 7 12 0 12C7 12 12 17 12 24C12 17 17 12 24 12C17 12 12 7 12 0Z"/></svg>
+    </span>
+    <span class="sparkle-star sp-2">
+      <svg viewBox="0 0 24 24" width="18" height="18" fill="#162223"><path d="M12 0C12 7 7 12 0 12C7 12 12 17 12 24C12 17 17 12 24 12C17 12 12 7 12 0Z"/></svg>
+    </span>
+    <span class="sparkle-star sp-3">
+      <svg viewBox="0 0 24 24" width="16" height="16" fill="#162223"><path d="M12 0C12 7 7 12 0 12C7 12 12 17 12 24C12 17 17 12 24 12C17 12 12 7 12 0Z"/></svg>
+    </span>
+    <span class="sparkle-star sp-4">
+      <svg viewBox="0 0 24 24" width="20" height="20" fill="#162223"><path d="M12 0C12 7 7 12 0 12C7 12 12 17 12 24C12 17 17 12 24 12C17 12 12 7 12 0Z"/></svg>
+    </span>
+
+    <div class="hero-ref-container">
+      <div class="hero-ref-text">
+        <span class="hero-ref-tag">DENTAL CARE</span>
+        <h1 class="hero-ref-title">
+          Seamless
+          <span class="tooth-3d-wrap">
+            <svg viewBox="0 0 100 115" width="0.84em" height="0.84em" class="tooth-3d-svg">
+              <defs>
+                <linearGradient id="toothShine" x1="15%" y1="0%" x2="85%" y2="100%">
+                  <stop offset="0%" stop-color="#ffffff" />
+                  <stop offset="40%" stop-color="#fefcf8" />
+                  <stop offset="75%" stop-color="#efe7db" />
+                  <stop offset="100%" stop-color="#d8cdba" />
+                </linearGradient>
+                <linearGradient id="toothGleam" x1="0%" y1="0%" x2="0%" y2="100%">
+                  <stop offset="0%" stop-color="#ffffff" stop-opacity="0.95" />
+                  <stop offset="100%" stop-color="#ffffff" stop-opacity="0" />
+                </linearGradient>
+                <filter id="toothShadow" x="-20%" y="-20%" width="140%" height="140%">
+                  <feDropShadow dx="0" dy="5" stdDeviation="5" flood-color="rgba(0,0,0,0.15)" />
+                </filter>
+              </defs>
+              <path d="M22,34 C16,18 32,8 46,14 C50,16 48,16 52,14 C66,8 82,18 76,34 C73,46 78,58 73,74 C69,87 64,102 56,106 C52,108 49,94 48,84 C47,76 45,76 44,84 C43,94 40,108 36,106 C28,102 23,87 19,74 C14,58 19,46 22,34 Z" fill="url(#toothShine)" filter="url(#toothShadow)" />
+              <ellipse cx="33" cy="22" rx="9" ry="5" fill="url(#toothGleam)" />
+              <ellipse cx="65" cy="22" rx="9" ry="5" fill="url(#toothGleam)" />
+              <path d="M49,15 Q50,32 50,46" stroke="#c9bca7" stroke-width="2.5" stroke-linecap="round" fill="none" opacity="0.7" />
+            </svg>
+          </span><br />
+          Dental <span class="care-italic">Care</span>
+        </h1>
+        <p class="hero-ref-desc">
+          A Smooth and Hassle-Free Dental Care Experience for a Healthy and Confident Smile
+        </p>
+        <div class="hero-ref-cta-wrap">
+          <a href="signup.html" class="btn-pill-dark hero-ref-cta" id="heroBookNowBtn">
+            Book Now
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 001: JOIN MEMBERSHIP -->
+  <section class="sec-ref sec-membership-ref">
+    <div class="sec-ref-container">
+      <div class="membership-ref-top">
+        <div>
+          <div class="sec-ref-label">001 &mdash; Join Membership</div>
+          <h2 class="sec-ref-heading">Affordable Dental<br />Care for Your Family</h2>
+          <p class="sec-ref-sub">Unlock Optimal Dental Wellness for Your Loved Ones</p>
+        </div>
+        <div class="membership-ref-right">
+          <div class="avatar-cluster">
+            <img src="images/client_portrait.webp" alt="Patient 1" />
+            <img src="images/patient_portrait_glasses.webp" alt="Patient 2" />
+            <img src="images/patient_portrait_woman.webp" alt="Patient 3" />
+            <span class="avatar-plus">+</span>
+          </div>
+          <a href="pricing.html" class="btn-pill-dark">
+            Join Membership <span>&rarr;</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="membership-cards-grid">
+        <!-- Mint Card -->
+        <div class="mem-card mem-card-mint">
+          <div class="mem-card-stat-row">
+            <div class="mem-stat-huge">80%</div>
+            <div class="mem-card-plus">+</div>
+          </div>
+          <p class="mem-card-desc">
+            Exclusive Member Savings: Save 30% &ndash; 80% on Dental Procedures, Including Oral Exams, Cleanings, and X-Rays.
+          </p>
+        </div>
+
+        <!-- Dark Card -->
+        <div class="mem-card mem-card-dark">
+          <div class="mem-card-stat-row">
+            <div class="mem-stat-huge">40%</div>
+            <div class="mem-card-plus">+</div>
+          </div>
+          <p class="mem-card-desc">
+            Enhanced Member Benefits: Save 40% on All Other Dental Services, Including Cosmetic, Restorative, and Specialty Dental Procedures.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3 WHITE FEATURE CARDS TRIAD -->
+  <section class="sec-triad-ref">
+    <div class="sec-ref-container">
+      <div class="triad-grid">
+        <div class="triad-card">
+          <div class="triad-icon-wrap">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 2C8.5 2 6 5 6 8.5C6 11.5 8 13.5 8.5 16C9 18.5 9 22 12 22C15 22 15 18.5 15.5 16C16 13.5 18 11.5 18 8.5C18 5 15.5 2 12 2Z"/>
+              <path d="M12 7c-1.5 0-2.5 1-2.5 2.5 0 2 2.5 3.5 2.5 3.5s2.5-1.5 2.5-3.5C14.5 8 13.5 7 12 7z" fill="currentColor"/>
+            </svg>
+          </div>
+          <p>Prevent cavities and gum disease</p>
+        </div>
+
+        <div class="triad-card">
+          <div class="triad-icon-wrap">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 2l2.4 5.2L20 8.4l-4 4.2.9 5.8-4.9-2.8-4.9 2.8.9-5.8-4-4.2 5.6-1.2L12 2z"/>
+              <path d="M19 19l1 2 2 .5-1.6 1.7.4 2.3-1.8-1-1.8 1 .4-2.3L16 21.5l2-.5 1-2z"/>
+            </svg>
+          </div>
+          <p>Keep your teeth sparkling clean</p>
+        </div>
+
+        <div class="triad-card">
+          <div class="triad-icon-wrap">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 2C8.5 2 6 5 6 8.5C6 11.5 8 13.5 8.5 16C9 18.5 9 22 12 22C15 22 15 18.5 15.5 16C16 13.5 18 11.5 18 8.5C18 5 15.5 2 12 2Z"/>
+              <circle cx="12" cy="11" r="3"/>
+            </svg>
+          </div>
+          <p>Early detection of dental issues</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 002: OUR WORKS -->
+  <section class="sec-ref sec-works-ref">
+    <div class="sec-ref-container">
+      <div class="works-ref-top">
+        <div>
+          <div class="sec-ref-label">002 &mdash; Our Works</div>
+        </div>
+        <div>
+          <h2 class="sec-ref-heading">A Healthy Smile<br />Starts Here</h2>
+        </div>
+      </div>
+
+      <div class="works-cards-grid">
+        <!-- Card 1 -->
+        <div class="work-item-card">
+          <div class="work-item-img-wrap">
+            <img src="images/brushing_teeth.webp" alt="Teeth Straightening & Cleaning" />
+          </div>
+          <div class="work-item-info">
+            <div class="work-item-title">Teeth Straightening</div>
+            <p class="work-item-sub">Improve your smile with cleaning.</p>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="work-item-card">
+          <div class="work-item-img-wrap">
+            <img src="images/dentist_checkup.webp" alt="Revitalized Cleaning" />
+          </div>
+          <div class="work-item-info">
+            <div class="work-item-title">Revitalized Cleaning</div>
+            <p class="work-item-sub">A simple way to enhance your smile.</p>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="work-item-card">
+          <div class="work-item-img-wrap">
+            <img src="images/dental_implant.webp" alt="Dental Implant" />
+          </div>
+          <div class="work-item-info">
+            <div class="work-item-title">Dental Implant</div>
+            <p class="work-item-sub">To replace and complete the function.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="works-ref-bottom">
+        <!-- Rotating Circular Badge -->
+        <div class="badge-spin-wrap">
+          <svg viewBox="0 0 100 100" class="badge-spin-svg">
+            <defs>
+              <path id="badgePath" d="M 50, 50 m -36, 0 a 36,36 0 1,1 72,0 a 36,36 0 1,1 -72,0" fill="none" />
+            </defs>
+            <text font-size="8.8" font-weight="700" letter-spacing="2.2" fill="#162223">
+              <textPath href="#badgePath">VIEW ALL WORKS &bull; VIEW ALL WORKS &bull; </textPath>
+            </text>
+          </svg>
+          <a href="services.html" class="badge-center-arrow" aria-label="View All Works">&#8599;</a>
+        </div>
+
+        <!-- Right Description -->
+        <p class="works-bottom-desc">
+          Expert Dental Care and Cleaning Procedures for a Brighter, Healthier Smile and Lasting Confidence
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 003: PROFESSIONAL DENTIST -->
+  <section class="sec-ref sec-dentists-ref">
+    <div class="sec-ref-container">
+      <div class="dentists-ref-top">
+        <div>
+          <div class="sec-ref-label">003 &mdash; Professional Dentist</div>
+          <h2 class="sec-ref-heading">Professional And<br />Gentle Care</h2>
+        </div>
+        <div class="dentists-ref-top-right">
+          <p>Our experienced team ensures a comfortable and stress-free visit every time.</p>
+          <a href="signup.html" class="btn-pill-dark">
+            Book your appointment <span>&rarr;</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Bubble Avatar Mosaic -->
+      <div class="bubble-mosaic-container">
+        <!-- Row 1 -->
+        <div class="bubble-row">
+          <img src="images/client_portrait.webp" alt="Dr. Evelyn Parker" class="doc-bubble" title="Dr. Evelyn Parker - Lead Implantologist" />
+          <img src="images/patient_portrait_glasses.webp" alt="Dr. Marcus Vance" class="doc-bubble" title="Dr. Marcus Vance - Orthodontics" />
+          <img src="images/patient_portrait_woman.webp" alt="Dr. Sophia Patel" class="doc-bubble" title="Dr. Sophia Patel - Pediatric Specialist" />
+          <img src="images/client_portrait.webp" alt="Dr. Adrian Kim" class="doc-bubble" title="Dr. Adrian Kim - Cosmetic Dentistry" />
+          <span class="bubble-blank bubble-blank-1"></span>
+          <img src="images/patient_portrait_woman.webp" alt="Dr. Clara Evans" class="doc-bubble" title="Dr. Clara Evans - Periodontics" />
+        </div>
+
+        <!-- Row 2 -->
+        <div class="bubble-row">
+          <img src="images/patient_portrait_woman.webp" alt="Dr. Tara Gomez" class="doc-bubble" title="Dr. Tara Gomez - Oral Surgery" />
+          <img src="images/client_portrait.webp" alt="Dr. Sean Miller" class="doc-bubble" title="Dr. Sean Miller - General Dentistry" />
+          <span class="bubble-blank bubble-blank-2"></span>
+          <img src="images/patient_portrait_glasses.webp" alt="Dr. Derek Ross" class="doc-bubble" title="Dr. Derek Ross - Endodontics" />
+          <img src="images/patient_portrait_woman.webp" alt="Dr. Naomi Zhang" class="doc-bubble" title="Dr. Naomi Zhang - Aesthetics" />
+          <img src="images/client_portrait.webp" alt="Dr. Lucas Hall" class="doc-bubble" title="Dr. Lucas Hall - Laser Care" />
+        </div>
+
+        <!-- Row 3 -->
+        <div class="bubble-row">
+          <span class="bubble-blank bubble-blank-3"></span>
+          <img src="images/patient_portrait_woman.webp" alt="Dr. Hannah Wright" class="doc-bubble" title="Dr. Hannah Wright - Hygiene Director" />
+          <img src="images/patient_portrait_glasses.webp" alt="Dr. Ethan Cole" class="doc-bubble" title="Dr. Ethan Cole - Restorative Specialist" />
+          <img src="images/client_portrait.webp" alt="Dr. Maya Lin" class="doc-bubble" title="Dr. Maya Lin - Smile Design" />
+          <img src="images/patient_portrait_woman.webp" alt="Dr. Chloe Bennett" class="doc-bubble" title="Dr. Chloe Bennett - Diagnostics" />
+          <span class="bubble-blank bubble-blank-4"></span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 004: PERSONALIZED CARE -->
+  <section class="sec-ref sec-personalized-ref">
+    <div class="sec-ref-container">
+      <div class="personalized-ref-top">
+        <div>
+          <div class="sec-ref-label">004 &mdash; Personalized Care</div>
+          <h2 class="sec-ref-heading">We specialize in you,<br />whatever your specialty</h2>
+        </div>
+        <div class="carousel-nav-btns">
+          <button class="carousel-btn" id="prevCardBtn" aria-label="Previous">&larr;</button>
+          <button class="carousel-btn" id="nextCardBtn" aria-label="Next">&rarr;</button>
+        </div>
+      </div>
+
+      <div class="personalized-cards-grid" id="personalizedGrid">
+        <!-- Card 1 -->
+        <div class="personalized-card">
+          <div class="personalized-card-img-wrap">
+            <img src="images/toothbrushes_cup.webp" alt="Reinforced Fillings" />
+          </div>
+          <div class="personalized-card-info">
+            <div class="personalized-card-title">Reinforced Fillings</div>
+            <p class="personalized-card-desc">
+              We prioritize the longevity and functionality of reinforced fillings offer a robust and tooth-colored restoration.
+            </p>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="personalized-card">
+          <div class="personalized-card-img-wrap">
+            <img src="images/dental_scaler_exam.webp" alt="Vibrant Checkups" />
+          </div>
+          <div class="personalized-card-info">
+            <div class="personalized-card-title">Vibrant Checkups</div>
+            <p class="personalized-card-desc">
+              At our dental practice, we understand that maintaining optimal oral health is essential for a radiant smile and overall well-being.
+            </p>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="personalized-card">
+          <div class="personalized-card-img-wrap">
+            <img src="images/teeth_whitening.webp" alt="Revitalized Cleaning" />
+          </div>
+          <div class="personalized-card-info">
+            <div class="personalized-card-title">Revitalized Cleaning</div>
+            <p class="personalized-card-desc">
+              At our dental practice, we believe that regular dental care cornerstone of a healthy and radiant smile.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 005: WHAT OUR CLIENT SAY -->
+  <section class="sec-testimonial-ref">
+    <div class="sec-ref-container">
+      <div class="sec-ref-label" style="text-align: center; margin-bottom: 2rem;">005 &mdash; What Our Client Say</div>
+      <div class="testimonial-quote-wrap">
+        <blockquote class="testimonial-huge-quote">
+          &ldquo;I've always been nervous about visiting the dentist, but this clinic changed everything for me. The staff is incredibly friendly, and the dentist explained every step of the process, making me feel comfortable and cared for. My teeth have never looked or felt better! I highly recommend them to anyone looking for top-notch dental care.&rdquo;
+        </blockquote>
+        <div class="testimonial-author-ref">&mdash; John D., New York</div>
+      </div>
+    </div>
+
+    <!-- 5 Monochrome Patient Portrait Ribbon -->
+    <div class="patient-ribbon">
+      <img src="images/patient_portrait_glasses.webp" alt="Happy Patient 1" />
+      <img src="images/patient_portrait_woman.webp" alt="Happy Patient 2" />
+      <img src="images/client_portrait.webp" alt="Happy Patient 3" />
+      <img src="images/patient_portrait_glasses.webp" alt="Happy Patient 4" />
+      <img src="images/patient_portrait_woman.webp" alt="Happy Patient 5" />
+    </div>
+  </section>
+
+  <!-- REFERENCE FOOTER -->
+  <footer class="footer-ref">
+    <div class="footer-ref-container">
+      <div class="footer-ref-top">
+        <a href="index.html" class="footer-ref-logo">
+          <img src="images/logo-stackly.webp" alt="Stackly Dental" style="filter: brightness(0);" />
+        </a>
+        <div class="footer-ref-top-contacts">
+          <a href="tel:+917010792745" class="footer-ref-top-pill" title="Call Clinic Directly">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+            <span>+91 70107 92745</span>
+          </a>
+          <a href="mailto:hello@stacklydental.com" class="footer-ref-top-pill footer-ref-email" title="Send Email">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            <span>hello@stacklydental.com</span>
+          </a>
+          <a href="contact.html" class="btn-pill-dark" style="padding: 0.52rem 1.35rem; font-size: 0.84rem;">
+            Contact Us <span>&rarr;</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-ref-grid">
+        <div class="footer-ref-brand">
+          <p>Empowering your smile journey with gentle, innovative, and reliable dental care.</p>
+          <a href="signup.html" class="btn-pill-dark" style="padding: 0.65rem 1.6rem; font-size: 0.88rem;">
+            Book Appointment <span>&rarr;</span>
+          </a>
+        </div>
+
+        <div class="footer-ref-col">
+          <h4>Navigations</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="services.html">Services & Treatments</a></li>
+            <li><a href="pricing.html">Pricing & Plans</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-ref-col">
+          <h4>Treatments</h4>
+          <ul>
+            <li><a href="services.html#cleaning">Revitalized Cleaning</a></li>
+            <li><a href="services.html#whitening">Teeth Whitening</a></li>
+            <li><a href="services.html#implants">Dental Implants</a></li>
+            <li><a href="services.html#orthodontics">Orthodontics & Aligners</a></li>
+            <li><a href="contact.html#emergency">Emergency Dental Care</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-ref-col">
+          <h4>Contact & Location</h4>
+          <ul class="footer-contact-list">
+            <li class="footer-contact-item">
+              <div class="footer-contact-icon">
+                <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+              </div>
+              <div>
+                <a href="tel:+917010792745" class="footer-contact-link" title="Call Main Clinic">
+                  <strong>+91 70107 92745</strong>
+                  <small>Call Direct / WhatsApp</small>
+                </a>
+              </div>
+            </li>
+            <li class="footer-contact-item">
+              <div class="footer-contact-icon">
+                <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              </div>
+              <div>
+                <a href="mailto:hello@stacklydental.com" class="footer-contact-link" title="Email Consultation">
+                  <strong>hello@stacklydental.com</strong>
+                  <small>Online Enquiries & Support</small>
+                </a>
+              </div>
+            </li>
+            <li class="footer-contact-item">
+              <div class="footer-contact-icon">
+                <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              </div>
+              <div>
+                <a href="https://maps.google.com/?q=MMR+Complex+Chinna+Thirupathi+Salem+Tamil+Nadu+636008" target="_blank" rel="noopener" class="footer-contact-link" title="Open Clinic in Google Maps">
+                  <strong>MMR Complex, Chinna Thirupathi</strong>
+                  <small>Salem, Tamil Nadu 636008 <span class="nav-hint-arrow">&nearr;</span></small>
+                </a>
+              </div>
+            </li>
+            <li class="footer-contact-item">
+              <div class="footer-contact-icon">
+                <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              </div>
+              <div>
+                <a href="contact.html#hours" class="footer-contact-link" title="Clinic Schedule">
+                  <strong>Mon &ndash; Sat: 9:00 AM &ndash; 7:00 PM</strong>
+                  <span class="emergency-badge"><span class="emergency-pulse-dot"></span> 24/7 Emergency Care</span>
+                </a>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="footer-ref-col">
+          <h4>Subscribe newsletter</h4>
+          <p style="font-size: 0.92rem; color: #586465; margin-bottom: 0.75rem;">Stay updated with the latest dental tips and member offers!</p>
+          <form onsubmit="event.preventDefault(); alert('Thank you for subscribing to Stackly Dental!');" class="newsletter-pill-input">
+            <input type="email" placeholder="Email address" required />
+            <button type="submit" aria-label="Subscribe">&rarr;</button>
+          </form>
+          <div style="margin-top: 1.25rem; display: flex; gap: 0.75rem;">
+            <a href="contact.html" class="btn btn-outline btn-sm" style="font-size: 0.8rem; padding: 0.4rem 0.9rem;">Ask a Question</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-ref-bottom">
+        <p>Copyright &copy; Stackly&reg; 2026. All rights reserved.</p>
+        <div class="footer-ref-socials">
+          <a href="#" aria-label="YouTube"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></a>
+          <a href="#" aria-label="LinkedIn"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg></a>
+          <a href="#" aria-label="Instagram"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+          <a href="#" aria-label="Facebook"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/animations.js"></script>
+  <script>
+    // Carousel buttons in Section 004
+    const prevCardBtn = document.getElementById('prevCardBtn');
+    const nextCardBtn = document.getElementById('nextCardBtn');
+    const personalizedGrid = document.getElementById('personalizedGrid');
+
+    if (prevCardBtn && nextCardBtn && personalizedGrid) {
+      prevCardBtn.addEventListener('click', () => {
+        personalizedGrid.scrollBy({ left: -360, behavior: 'smooth' });
+      });
+      nextCardBtn.addEventListener('click', () => {
+        personalizedGrid.scrollBy({ left: 360, behavior: 'smooth' });
+      });
+    }
+  </script>
+</body>
+</html>
