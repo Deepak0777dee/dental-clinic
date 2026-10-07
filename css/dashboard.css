@@ -236,7 +236,7 @@ body:has(.dashboard-sidebar) {
   border-radius: var(--radius-lg);
   padding: 1.5rem;
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   gap: 1rem;
   transition: transform var(--transition);
   box-shadow: var(--shadow-xs);
@@ -258,11 +258,20 @@ body:has(.dashboard-sidebar) {
   flex-shrink: 0;
 }
 
+.dash-stat-info {
+  flex: 1;
+  min-width: 0;
+  text-align: left;
+}
+
 .dash-stat-info h4 {
   font-size: 0.85rem;
   color: var(--text-muted);
   font-weight: 600;
   margin-bottom: 0.25rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .dash-stat-info .val {
@@ -272,13 +281,15 @@ body:has(.dashboard-sidebar) {
   line-height: 1.1;
   margin-bottom: 0.5rem;
   font-family: var(--font-heading);
+  white-space: nowrap;
 }
 
 .dash-stat-trend {
   font-size: 0.75rem;
   font-weight: 600;
-  display: inline-flex;
+  display: flex;
   align-items: center;
+  flex-wrap: wrap;
   gap: 0.25rem;
 }
 .trend-up { color: var(--success); }
