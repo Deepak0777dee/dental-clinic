@@ -36,7 +36,10 @@
     <p style="color: var(--text-muted); max-width: 500px; margin-bottom: 2rem; line-height: 1.8;">
       The page you're looking for might have been removed, had its name changed, or is temporarily unavailable. Let's get you back to a healthy smile.
     </p>
-    <a href="index.html" class="btn btn-primary btn-lg">Return Home</a>
+    <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+      <button onclick="window.history.back()" class="btn btn-outline btn-lg" style="cursor: pointer;">Back to Previous Page</button>
+      <a href="index.html" class="btn btn-primary btn-lg">Return Home</a>
+    </div>
   </div>
 </body>
 </html>

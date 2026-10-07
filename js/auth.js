@@ -116,7 +116,7 @@ function authApplyRBAC() {
 
   setTextById('sb-role', user.role);
   setTextById('sb-email', user.email);
-  setTextById('topbarAvatar', user.name.charAt(0).toUpperCase());
+  setTextById('sb-avatar', user.name.charAt(0).toUpperCase());
   setTextById('topbar-name', user.name);
 }
 

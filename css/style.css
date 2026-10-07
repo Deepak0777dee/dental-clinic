@@ -2137,13 +2137,22 @@ textarea.form-control { min-height: 120px; resize: vertical; }
   border-color: #162223;
 }
 .personalized-cards-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  display: flex;
+  overflow-x: auto;
   gap: 1.75rem;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.personalized-cards-grid::-webkit-scrollbar {
+  display: none;
 }
 .personalized-card {
   display: flex;
   flex-direction: column;
+  flex: 0 0 calc(33.333% - 1.167rem);
+  scroll-snap-align: start;
 }
 .personalized-card-img-wrap {
   width: 100%;
@@ -2486,7 +2495,7 @@ textarea.form-control { min-height: 120px; resize: vertical; }
   .sec-ref { padding: 4.5rem 2rem; }
   .membership-cards-grid { grid-template-columns: 1fr; }
   .works-cards-grid { grid-template-columns: 1fr; }
-  .personalized-cards-grid { grid-template-columns: 1fr; }
+  .personalized-card { flex: 0 0 calc(50% - 0.875rem); }
   .triad-grid { grid-template-columns: 1fr; }
   .footer-ref-grid { grid-template-columns: 1fr 1fr; gap: 2rem; }
   .patient-ribbon { grid-template-columns: repeat(3, 1fr); height: 280px; }
@@ -2543,7 +2552,7 @@ textarea.form-control { min-height: 120px; resize: vertical; }
   .hero-ref-desc { font-size: 1rem; }
   .mem-stat-huge { font-size: 3.4rem; }
   .mem-card { padding: 2rem 1.5rem; min-height: 220px; }
-  .works-cards-grid, .personalized-cards-grid {
+  .works-cards-grid {
     display: flex;
     overflow-x: auto;
     scroll-snap-type: x mandatory;
@@ -2551,10 +2560,23 @@ textarea.form-control { min-height: 120px; resize: vertical; }
     padding-bottom: 1rem;
     -webkit-overflow-scrolling: touch;
   }
-  .work-item-card, .personalized-card {
+  .work-item-card {
     min-width: 85%;
     flex-shrink: 0;
     scroll-snap-align: start;
+  }
+  .personalized-cards-grid {
+    display: flex;
+    flex-direction: column;
+    overflow: visible;
+    gap: 1.5rem;
+  }
+  .personalized-card {
+    width: 100%;
+    min-width: auto;
+  }
+  .personalized-ref-top .carousel-nav-btns {
+    display: none;
   }
   .work-item-img-wrap, .personalized-card-img-wrap {
     height: 280px;
